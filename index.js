@@ -20,7 +20,7 @@ await (await page.$$('.calendar-pager'))[1].click();
 
 //click day
 const day = "19";
-await page.locator('div ::-p-text(19)').click();
+await page.locator('div ::-p-text('+day+')').click();
 
 //click 'Next step bttn'
 await page.locator('.button-container').click();
@@ -28,7 +28,7 @@ await page.locator('.button-container').click();
 //------- STEP 2 ---------
 //select hour
 const hour = "18:00";
-await page.locator('div ::-p-text(18:00)').click();
+await page.locator('div ::-p-text('+hour+')').click();
 
 
 // Close browser.
