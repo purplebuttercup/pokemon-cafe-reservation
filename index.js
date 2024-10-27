@@ -31,7 +31,7 @@ page.setViewport({width: 1080, height: 1024});
 
 //------- STEP 1 ---------
 //RELOAD day selection
-await waitForSelectorWithReload('select[name="guest"]', 'month selection');
+await waitForSelectorWithReload('select[name="guest"]', 'day selection');
 // select no. of people.
 await page.waitForSelector('select[name="guest"]').then(() => {
   page.select('select[name="guest"]', preferences.guests);
@@ -51,7 +51,7 @@ await page.locator('.button-container').click();
 //------- STEP 2 ---------
 const hour = "18:00";
 //RELOAD hour selection
-await waitForSelectorWithReload('select[name="guest"]', 'month selection');
+await waitForSelectorWithReload('select[name="guest"]', 'hour selection');
 //select hour
 await page.locator('div ::-p-text('+ preferences.hour +')').click();
 
